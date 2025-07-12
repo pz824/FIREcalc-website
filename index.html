@@ -4,43 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FIRE Calculator</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>FIRE Calculator</h1>
+  <header class="bg-dark text-white py-3 mb-4">
+    <div class="container text-center">
+      <h1 class="mb-0">FIRE Calculator</h1>
+    </div>
   </header>
 
-  <section>
-    <h2>Retirement Projection</h2>
-    <label>Current Net Worth: <input type="number" id="net-worth" value="0"></label>
-    <label>Expected Market Growth %: <input type="number" id="growth" value="7"></label>
-    <label>Safe Withdrawal Rate %: <input type="number" id="swr" value="4"></label>
-    <label>Inflation %: <input type="number" id="inflation" value="3"></label>
-    <label>Monthly Contributions: <input type="number" id="contrib" value="0"></label>
-    <label>Desired Annual Spending: <input type="number" id="spending" value="40000"></label>
-    <label>Years to Project: <input type="number" id="years" value="30"></label>
-    <button onclick="calculateFIRE()">Calculate</button>
-    <div id="results"></div>
-  </section>
+  <main class="container">
+    <section class="card p-4 mb-4">
+      <h2 class="h4 mb-3">Retirement Projection</h2>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="net-worth" class="form-label">Current Net Worth</label>
+          <input type="number" class="form-control" id="net-worth" value="0">
+        </div>
+        <div class="col-md-6">
+          <label for="growth" class="form-label">Expected Market Growth %</label>
+          <input type="number" class="form-control" id="growth" value="7">
+        </div>
+        <div class="col-md-6">
+          <label for="swr" class="form-label">Safe Withdrawal Rate %</label>
+          <input type="number" class="form-control" id="swr" value="4">
+        </div>
+        <div class="col-md-6">
+          <label for="inflation" class="form-label">Inflation %</label>
+          <input type="number" class="form-control" id="inflation" value="3">
+        </div>
+        <div class="col-md-6">
+          <label for="contrib" class="form-label">Monthly Contributions</label>
+          <input type="number" class="form-control" id="contrib" value="0">
+        </div>
+        <div class="col-md-6">
+          <label for="spending" class="form-label">Desired Annual Spending</label>
+          <input type="number" class="form-control" id="spending" value="40000">
+        </div>
+        <div class="col-md-6">
+          <label for="years" class="form-label">Years to Project</label>
+          <input type="number" class="form-control" id="years" value="30">
+        </div>
+        <div class="col-12">
+          <button class="btn btn-success" type="button" onclick="calculateFIRE()">Calculate</button>
+          <div id="results" class="fw-bold mt-3"></div>
+        </div>
+      </div>
+    </section>
 
-  <section>
-    <h2>Market Index Performance</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Index</th><th>1 Day</th><th>1 Month</th><th>YTD</th><th>1 Year</th>
-        </tr>
-      </thead>
-      <tbody id="market-table"></tbody>
-    </table>
-  </section>
+    <section class="card p-4 mb-4">
+      <h2 class="h4 mb-3">Market Index Performance</h2>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>1 Day</th>
+              <th>1 Month</th>
+              <th>YTD</th>
+              <th>1 Year</th>
+            </tr>
+          </thead>
+          <tbody id="market-table"></tbody>
+        </table>
+      </div>
+    </section>
 
-  <section>
-    <h2>Finance News</h2>
-    <ul id="news-list"></ul>
-  </section>
+    <section class="card p-4 mb-4">
+      <h2 class="h4 mb-3">Finance News</h2>
+      <ul id="news-list" class="list-unstyled mb-0"></ul>
+    </section>
+  </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
