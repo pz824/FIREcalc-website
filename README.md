@@ -1,6 +1,6 @@
 # FIREcalc Website
 
-This is a simple static website that helps you project your retirement savings and FIRE number.
+This is a simple static website that helps you project your retirement savings and FIRE number. The interface uses [Bootstrap](https://getbootstrap.com/) for a more modern look.
 
 ## Features
 

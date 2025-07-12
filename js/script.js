@@ -23,6 +23,14 @@ async function loadNews() {
   });
 }
 
+function formatUSD(value) {
+  return value.toLocaleString('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 2
+  });
+}
+
 function calculateFIRE() {
   const netWorth = parseFloat(document.getElementById('net-worth').value) || 0;
   const growth = parseFloat(document.getElementById('growth').value) / 100 || 0;
@@ -40,14 +48,14 @@ function calculateFIRE() {
     target = target * (1 + inflation);
     if (portfolio >= target) {
       document.getElementById('results').textContent =
-        `You can reach FIRE in ${y} years with a portfolio of $${portfolio.toFixed(2)}.`;
+        `You can reach FIRE in ${y} years with a portfolio of ${formatUSD(portfolio)}.`;
       return;
     }
   }
 
   document.getElementById('results').textContent =
-    `After ${years} years, projected portfolio is $${portfolio.toFixed(2)}, ` +
-    `but target in inflated dollars is $${target.toFixed(2)}.`;
+    `After ${years} years, projected portfolio is ${formatUSD(portfolio)}, ` +
+    `but target in inflated dollars is ${formatUSD(target)}.`;
 }
 
 window.onload = function() {
