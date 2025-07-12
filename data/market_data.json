@@ -1,0 +1,7 @@
+{
+  "indices": [
+    {"name": "S&P 500", "oneDay": 0.5, "oneMonth": 2.0, "ytd": 10.2, "oneYear": 15.3},
+    {"name": "Dow Jones", "oneDay": -0.2, "oneMonth": 1.5, "ytd": 9.0, "oneYear": 12.7},
+    {"name": "NASDAQ", "oneDay": 1.2, "oneMonth": 3.1, "ytd": 15.4, "oneYear": 20.8}
+  ]
+}
