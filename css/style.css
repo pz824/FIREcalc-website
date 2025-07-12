@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+section {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #fff;
+  border-radius: 4px;
+}
+input, select {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+button {
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #218838;
+}
+#results {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: center;
+}

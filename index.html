@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIRE Calculator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>FIRE Calculator</h1>
+  </header>
+
+  <section>
+    <h2>Retirement Projection</h2>
+    <label>Current Net Worth: <input type="number" id="net-worth" value="0"></label>
+    <label>Expected Market Growth %: <input type="number" id="growth" value="7"></label>
+    <label>Safe Withdrawal Rate %: <input type="number" id="swr" value="4"></label>
+    <label>Inflation %: <input type="number" id="inflation" value="3"></label>
+    <label>Monthly Contributions: <input type="number" id="contrib" value="0"></label>
+    <label>Desired Annual Spending: <input type="number" id="spending" value="40000"></label>
+    <label>Years to Project: <input type="number" id="years" value="30"></label>
+    <button onclick="calculateFIRE()">Calculate</button>
+    <div id="results"></div>
+  </section>
+
+  <section>
+    <h2>Market Index Performance</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Index</th><th>1 Day</th><th>1 Month</th><th>YTD</th><th>1 Year</th>
+        </tr>
+      </thead>
+      <tbody id="market-table"></tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Finance News</h2>
+    <ul id="news-list"></ul>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
