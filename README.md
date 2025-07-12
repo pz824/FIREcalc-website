@@ -5,7 +5,8 @@ This is a simple static website that helps you project your retirement savings a
 ## Features
 
 - **Retirement projection** based on your current net worth, expected market growth, safe withdrawal rate, inflation, monthly contributions and desired annual spending.
-- **Market index performance** table with sample data.
+- **Market index performance** pulled from the Finnhub API.
 - **Finance news** section with example articles.
+- **Stock search and watchlist** powered by the Finnhub API.
 
 Open `index.html` in a web browser to use the calculator.
